@@ -4,6 +4,8 @@ const welcome = document.getElementById("welcome");
 const counter = document.getElementById("counter");
 const themeBtn = document.getElementById("themeBtn");
 
+let new_text = null;
+
 let clicks = 0;
 
 themeBtn.addEventListener("click", () => {
@@ -16,6 +18,11 @@ btn.addEventListener("click", () => {
     welcome.classList.remove("show", "fade-out");
 
     clicks++;
+
+    counter.classList.remove("counter");
+    void counter.offsetWidth; // перезапуск анимации
+    counter.classList.add("counter");
+
     counter.textContent = `Нажатий: ${clicks}`;
 
     if (!name) {
@@ -37,9 +44,10 @@ btn.addEventListener("click", () => {
 
     setTimeout(() => welcome.classList.add("fade-out"), 3000);
 
-    const new_text = document.createElement("p");
-    new_text.textContent = "Этот сайт будет развиваться!";
-    new_text.style.color = "green";
-
-    document.body.appendChild(new_text);
+    if (!new_text) {
+        new_text = document.createElement("p");
+        new_text.textContent = "Этот сайт будет развиваться!";
+        new_text.style.color = "green";
+        document.body.appendChild(new_text);
+    }
 });

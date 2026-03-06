@@ -9,7 +9,7 @@ let new_text = null;
 let clicks = 0;
 
 themeBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark"); 
+    document.body.classList.toggle("dark");
 });
 
 btn.addEventListener("click", () => {
@@ -47,9 +47,10 @@ btn.addEventListener("click", () => {
     if (!new_text) {
         new_text = document.createElement("p");
         new_a = document.createElement("a");
+        const url = "https://t.me/my_first_in_live_bot";
 
-        new_a.textContent = "https://t.me/my_first_in_live_bot";
-        new_a.href = "https://t.me/my_first_in_live_bot";
+        new_a.href = url;
+        new_a.textContent = url;
 
         new_text.textContent = "Этот сайт будет развиваться!";
         new_text.style.color = "green";
@@ -58,3 +59,4 @@ btn.addEventListener("click", () => {
         document.body.appendChild(new_a);
     }
 });
+// https://maxim-programmer12.github.io/myHTML-document/

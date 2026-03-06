@@ -17,10 +17,10 @@ btn.addEventListener("click", () => {
 
     welcome.classList.remove("show", "fade-out");
 
-    clicks++;
+    clicks++; // удобный способ добавить +1 к переменной.
 
     counter.classList.remove("counter");
-    void counter.offsetWidth; // перезапуск анимации
+    void counter.offsetWidth; // перезапуск анимации.
     counter.classList.add("counter");
 
     counter.textContent = `Нажатий: ${clicks}`;
@@ -46,8 +46,15 @@ btn.addEventListener("click", () => {
 
     if (!new_text) {
         new_text = document.createElement("p");
+        new_a = document.createElement("a");
+
+        new_a.textContent = "https://t.me/my_first_in_live_bot";
+        new_a.href = "https://t.me/my_first_in_live_bot";
+
         new_text.textContent = "Этот сайт будет развиваться!";
         new_text.style.color = "green";
+
         document.body.appendChild(new_text);
+        document.body.appendChild(new_a);
     }
 });

@@ -50,7 +50,7 @@ btn.addEventListener("click", () => {
         const url = "https://t.me/my_first_in_live_bot";
 
         new_a.href = url;
-        new_a.textContent = "Ссылка на моего чат-бота:" + url;
+        new_a.textContent = "Ссылка на моего чат-бота: " + url;
 
         new_text.textContent = "Этот сайт будет развиваться!";
         new_text.style.color = "green";
